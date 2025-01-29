@@ -19,6 +19,8 @@ header {
     justify-content: center;
     width: 100%;
     font-weight: bold;
+    border:  black 2px solid;;
+
 }
 
 .center {
@@ -29,3 +31,18 @@ header {
     justify-content: center;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+ul {
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.link {
+    flex-direction: row;
+}
