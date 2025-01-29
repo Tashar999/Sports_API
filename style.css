@@ -3,6 +3,7 @@ body, html {
     font-family:"PT sans", sans-serif;
     color:rgb(0, 0, 0);
     line-height: 1.4;
+    background: linear-gradient(135deg, #3956BA, #F45B8F);
 }
 
 .container {
