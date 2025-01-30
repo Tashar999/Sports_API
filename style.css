@@ -3,9 +3,7 @@ body, html {
     font-family:"PT sans", sans-serif;
     color:rgb(0, 0, 0);
     line-height: 1.4;
-    background: linear-gradient(135deg, #3956BA, #F45B8F);
 }
-
 .container {
     min-height: 100%;
     width: 100%;
@@ -20,8 +18,6 @@ header {
     justify-content: center;
     width: 100%;
     font-weight: bold;
-    border:  black 2px solid;;
-
 }
 
 .center {
@@ -35,15 +31,26 @@ header {
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 1.33rem;
 
 }
 
 ul {
-    flex-direction: row;
+    display: flex;
     list-style-type: none;
+    gap: 150px;
+    flex-direction: row;
 }
 
-.link {
-    flex-direction: row;
+a {
+    text-decoration: none;
+    color: black;
+}
+
+head {
+    display: flex;
+    min-height: 4%;
+    width: 100%;
+    background-color: rgb(241, 222, 222);
 }
