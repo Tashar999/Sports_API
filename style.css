@@ -39,8 +39,9 @@ nav {
 ul {
     display: flex;
     list-style-type: none;
-    gap: 150px;
+    gap: 100px;
     flex-direction: row;
+    padding-left: 200px;
 }
 
 a {
@@ -53,4 +54,8 @@ head {
     min-height: 4%;
     width: 100%;
     background-color: rgb(241, 222, 222);
+}
+
+.img {
+    justify-content;
 }
