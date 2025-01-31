@@ -1,6 +1,6 @@
 body, html {
     height: 100%;
-    font-family:"PT sans", sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:rgb(0, 0, 0);
     line-height: 1.4;
 }
@@ -18,6 +18,8 @@ header {
     justify-content: center;
     width: 100%;
     font-weight: bold;
+    padding-bottom: 1lh;
+    padding-top: 1lh;
 }
 
 .center {
@@ -56,6 +58,35 @@ head {
     background-color: rgb(241, 222, 222);
 }
 
+.hero {
+    background-image: url(https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    position: sticky;
+    min-height: 60vh;
+    min-width: 100%;
+    opacity: 90%;
+    flex: 1;
+}
+
 .img {
-    justify-content;
+    padding-right: 5vw;
+    border-right: black groove;
+    border-width: thin;
+}
+
+h1 {
+    font-size: 4.972rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+p {
+    font-size: 11.872/2.986;
 }
