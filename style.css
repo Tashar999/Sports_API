@@ -72,6 +72,7 @@ head {
 }
 
 .img {
+<<<<<<< HEAD
     padding-right: 5vw;
     border-right: black groove;
     border-width: thin;
@@ -89,4 +90,7 @@ h2 {
 
 p {
     font-size: 11.872/2.986;
+=======
+    border-radius: 50%;
+>>>>>>> f87593a91dc9abf6839fead0945b561a6045898a
 }
