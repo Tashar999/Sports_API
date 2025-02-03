@@ -1,5 +1,8 @@
 async function getData() {
-    const url = "https://api-football-v1.p.rapidapi.com/v3/teams/statistics?league=39&season=2020&team=33?api_token=91da64ad4dmshd0715e2ef54e803p13ef3ajsne0ce8dc3b79b";
+    const url = 'https://apiv3.apifootball.com/?action=get_players&player_name=Benzema&APIkey=${apiKey}'
+    const apiKey= 'd0a198f9a82351d2795da1de28a3b4521eeba3dcb9581b3aa38b8d39c606bc84'
+    const player= 
+
     try {
       const response = await fetch(url);
       if (!response.ok) {
