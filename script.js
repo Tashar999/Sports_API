@@ -29,4 +29,3 @@ async function getPlayerDetails() {
     const displayResults = document.getElementById('display-results')
     displayResults.innerHTML = htmlOutput 
   }
-  getPlayerDetails()
