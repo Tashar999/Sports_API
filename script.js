@@ -1,7 +1,8 @@
-async function getData() {
-    const url = 'https://apiv3.apifootball.com/?action=get_players&player_name=Benzema&APIkey=${apiKey}'
-    const apiKey= 'd0a198f9a82351d2795da1de28a3b4521eeba3dcb9581b3aa38b8d39c606bc84'
+async function getPlayerDetails() {
+    const apiKey= `d0a198f9a82351d2795da1de28a3b4521eeba3dcb9581b3aa38b8d39c606bc84`
     const player= document.getElementById('search-player').value
+    const url = `https://apiv3.apifootball.com/?action=get_players&player_name=${player}&APIkey=${apiKey}`
+
 
     try{
       const response = await fetch(url);
@@ -9,8 +10,8 @@ async function getData() {
         throw new Error(`Response status: ${response.status}`);
       }
   
-      const json = await response.json();
-      console.log(json);
+      const data = await response.json();
+      console.log(data);
     }catch (error) 
     {
       console.log("The application was not able to fetch the player", error);
@@ -28,4 +29,4 @@ async function getData() {
     const displayResults = document.getElementById('display-results')
     displayResults.innerHTML = htmlOutput 
   }
-  getData()
+  getPlayerDetails()
