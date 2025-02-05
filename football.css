@@ -1,0 +1,14 @@
+.container{
+    width: 100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsla(120, 90%, 40%, 0.5);
+
+}
+
+.search-players{
+    border : 1px solid black;
+}
