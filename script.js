@@ -12,6 +12,7 @@ async function getPlayerDetails() {
   
       const data = await response.json();
       console.log(data);
+      displayResults(data)
     }catch (error) 
     {
       console.log("The application was not able to fetch the player", error);
