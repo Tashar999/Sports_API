@@ -103,6 +103,7 @@ p {
 .link {
     font-weight: bold;
 }
+<<<<<<< HEAD
 
 form {
     display: inline-block;
@@ -300,4 +301,6 @@ ul {
         font-weight: bold;
         font-size: larger;
     }
+=======
+>>>>>>> 454ab8d386f585f8ff538695ebd532b332b3aebb
 }
