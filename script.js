@@ -23,9 +23,9 @@ async function getPlayerDetails() {
     const htmlOutput = `
     <p><img src=${player_image} alt="player123" width="200px" height="auto" style="border-radius: 50%"></>
     <p>Player Name : ${player_name}</p>
-    <p>Belongs to ${team_name}</p>
-    <p>Has Scored ${player_goals}</p>
-    <p>with a total of ${player_assists} assists.</p>
+    <p>Team: ${team_name}</p>
+    <p>Goals:${player_goals}</p>
+    <p>Assists: ${player_assists}</p>
     `
     const displayResults = document.getElementById('display-results')
     displayResults.innerHTML = htmlOutput 
