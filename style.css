@@ -94,7 +94,7 @@ head {
 
 @keyframes scale {
     50% {
-        transform: scale(0.5));
+        transform: scale(0.5);
     }
 }
 
@@ -328,4 +328,33 @@ ul {
   border-radius: 0.5rem;
   background-color: hotpink;
   margin-bottom: 2rem;
+}
+
+#one {
+  position: relative;
+  overflow: hidden;
+}
+
+#one span {
+  position: relative;
+  z-index: 2;
+}
+
+#one:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 0;
+  height: 0;
+  background-color: lightcoral;
+  border-radius: 999px;
+  transition: 0.6s ease-out;
+}
+
+#one:hover:after{
+  width: 200%;
+  padding-top: 200%;
 }
