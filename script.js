@@ -19,14 +19,24 @@ async function getPlayerDetails() {
     }
   }
   function displayResults(data){
-    const [{player_name, player_image, player_goals, team_name, player_assists }] = data
+    /*
+    1. get the length of the json file
+    2. be able to call from any line
+    3. for loop to iterate over every person
+    4. (optional) turn into 2 functions for ease of use
+    */
+    const [{player_name, player_image, player_goals, team_name, player_assists, player_type }] = data
     const htmlOutput = `
     <p><img src=${player_image} alt="player123" width="200px" height="auto" style="border-radius: 50%"></>
     <p>Player Name : ${player_name}</p>
     <p>Team: ${team_name}</p>
     <p>Goals:${player_goals}</p>
     <p>Assists: ${player_assists}</p>
+    <p> Player Type: ${player_type}</p> 
     `
     const displayResults = document.getElementById('display-results')
     displayResults.innerHTML = htmlOutput 
   }
+function loopArray(data){
+  length
+}
