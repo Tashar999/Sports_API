@@ -35,9 +35,13 @@ body, html {
 a:hover, a:active {
   opacity: 0.9;
   color: #000;
-  text-decoration: underline;
 }
 
+a:active {
+  opacity: 0.9;
+  color: #000;
+  border-bottom: 2px solid rgb(97, 45, 45);
+}
 
 
 h1{
@@ -118,71 +122,6 @@ nav {
 
 }
 
-<<<<<<< HEAD
-=======
-ul {
-    display: flex;
-    list-style-type: none;
-    gap: 100px;
-    flex-direction: row;
-    padding-left: 200px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-head {
-    display: flex;
-    min-height: 4%;
-    width: 100%;
-    background-color: rgb(241, 222, 222);
-    
-}
-
-.hero {
-    background-image: url(https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg);
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-    position: sticky;
-    min-height: 60vh;
-    min-width: 100%;
-    opacity: 90%;
-    flex: 1;
-}
-
-@keyframes scale {
-    50% {
-        transform: scale(0.5);
-    }
-}
-
-.img {
-    padding-right: 5vw;
-    border-right: black groove;
-    border-width: thin;
-    animation-name: scale;
-    animation-duration: 3s;
-}
-
-h1 {
-    font-size: 4.972rem;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2.3rem;
-    text-align: center;
-}
-
-p {
-    font-size: 11.872/2.986;
-}
-
->>>>>>> 2d76a032bd77f00b134e6101d83411b0bea33b51
 .link {
   display: flex;
   list-style-type: none;

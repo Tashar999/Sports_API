@@ -37,9 +37,13 @@ body, html {
 a:hover, a:active {
   opacity: 0.9;
   color: #000;
-  text-decoration: underline;
 }
 
+a:active {
+  opacity: 0.9;
+  color: #000;
+  border-bottom: 2px solid rgb(97, 45, 45);
+}
 
 
 h1{
