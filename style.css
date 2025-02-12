@@ -7,6 +7,21 @@ body, html {
   padding: 0;
 }
 
+
+header {
+  position: sticky;
+  flex-direction: row;
+  width: 100%;
+  font-weight: bold;
+  gap: 60px;
+  padding-left: 20px;
+}
+
+header p {
+  text-align: right;
+  padding-right: 60px;
+}
+
 .containers{
   width: 100vw;
   height:100vh;
@@ -32,17 +47,92 @@ body, html {
   justify-content: center;
 }
 
-a:hover, a:active {
-  opacity: 0.9;
-  color: #000;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
 }
 
-a:active {
-  opacity: 0.9;
-  color: #000;
-  border-bottom: 2px solid rgb(97, 45, 45);
+.navbar a {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff0000;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 33.3333%;
+  padding-left: 80px;
+  background-color: #ccc;
+  height: 350px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+.row:after {
+  display: table;
+  clear: both;
+}
+
+.link {
+    display: flex;
+    list-style-type: none;
+    gap: 200px;
+    flex-direction: row;
+    padding-left: 100px;
+    font-weight: bold;
+}
+
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
 
 h1{
   font-size: 3.815rem;
@@ -70,18 +160,6 @@ h4{
   border-radius: 50;
 }
 
-.bar {
-  display: flex;
-  height: 10vh;
-  width: 100%;
-  background-color: rgb(102, 17, 17);
-  color: aliceblue;
-  justify-content: center;
-  font-size: larger;
-  flex-direction: column;
-  align-items: center;
-  line-height: 0.3;
-}
 
 .line {
   border-bottom: 1px solid #888;
@@ -94,16 +172,6 @@ h4{
   flex-direction: column;
 }
 
-header {
-  position: sticky;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  font-weight: bold;
-  padding-bottom: 0.5lh;
-  padding-top: 0.5lh;
-}
 
 .center {
   flex: 1;
@@ -205,11 +273,8 @@ header, footer {
 }
 
 .img {
-  padding-right: 5vw;
-  border-right: black groove;
-  border-width: thin;
-  animation-name: scale;
-  animation-duration: 3s;
+  float: left;
+  justify-content: flex-start;
 }
 
 h1 {

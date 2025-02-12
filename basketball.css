@@ -146,7 +146,7 @@ header p {
 
 .column {
     float: left;
-    width: 50%;
+    width: 33.3333%;
     padding-left: 80px;
     background-color: #ccc;
     height: 350px;
@@ -276,7 +276,7 @@ header p {
       margin-left: 0.5em;
     }
   
-  @media (max-width: 1015px) {
+  @media (max-width: 1100px) {
       h1{
         font-size: 5.61rem;
       }
@@ -290,8 +290,25 @@ header p {
       }
       
       h4{
-        font-size: 2.369rem;
+        font-size: 1.6rem;
       }
+
+      .column a {
+        float: none;
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .column {
+    float: left;
+    width: 33.3333%;
+    padding-left: 40px;
+    background-color: #ccc;
+    height: 350px;
+}
   
   @media (max-width: 880px) {
       
