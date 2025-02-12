@@ -135,24 +135,31 @@ a {
   text-decoration: none;
   color: rgb(134, 133, 133);
 }
-
+/* 
 head {
   display: flex;
   min-height: 4%;
   width: 100%;
   background-color: rgb(241, 222, 222);
-}
+} */
 
 header, footer {
   flex: 0 0 150px;
 }
 
 .hero {
-  background-image: url(https://static.euronews.com/articles/stories/08/67/38/38/1920x1080_cmsv2_30e81aae-c5f4-5842-8202-16aaf3e99f74-8673838.jpg);
+  background-image: url(https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg);
   background-position: top center;
   background-size: cover;
   height: 1000px;
   width: 100%;
+  color: white;
+  font-size:xx-large;
+  text-align: center;
+}
+
+.hero h2 {
+  padding-top: 100px;
 }
 
 .content {
@@ -178,7 +185,8 @@ header, footer {
 }
 .yellow {background-color: yellow;
   flex: 3;
-  background-image: url(https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg);
+  background-image: url(hhttps://static.euronews.com/articles/stories/08/67/38/38/1920x1080_cmsv2_30e81aae-c5f4-5842-8202-16aaf3e99f74-8673838.jpg);
+  /* https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg */
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
