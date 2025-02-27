@@ -1,8 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
 body, html {
-    height: 100%;
-    font-family: "Montserrat";
-    color:rgb(0, 0, 0);
-    line-height: 1.4;
+  height: 100%;
+  font-family: "Montserrat";
+  color:rgb(0, 0, 0);
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  flex-direction: row;
+  width: 100%;
+  font-weight: bold;
+  gap: 60px;
+  padding-left: 20px;
+}
+
+header p {
+  text-align: right;
+  padding-right: 60px;
 }
 
 .containers{
@@ -17,6 +37,7 @@ body, html {
 
 }
 
+
 .div {
     font-family: sans-serif;
     position: relative;
@@ -30,9 +51,7 @@ body, html {
     justify-content: center;
 }
 
-div:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 
 h1{
     font-size: 3.815rem;
@@ -60,30 +79,15 @@ h4{
     border-radius: 50;
 }
 
-.bar {
-    display: flex;
-    min-height: 2%;
-    width: 100%;
-    background-color: rgb(212, 177, 177);
-    justify-content: center;
-}
+.line {
+    border-bottom: 1px solid #888;
+  }
 
 .container {
     min-height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    font-weight: bold;
-    padding-bottom: 0.5lh;
-    padding-top: 0.5lh;
 }
 
 .center {
@@ -94,34 +98,100 @@ header {
     justify-content: center;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 1.33rem;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff0000;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 
 }
 
-ul {
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 33.3333%;
+  padding-left: 80px;
+  background-color: #ccc;
+  height: 350px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+.row:after {
+  display: table;
+  clear: both;
+}
+
+.link {
     display: flex;
     list-style-type: none;
-    gap: 100px;
+    gap: 200px;
     flex-direction: row;
-    padding-left: 200px;
+    padding-left: 100px;
+    font-weight: bold;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
 }
 
-head {
+/* head {
     display: flex;
     min-height: 4%;
     width: 100%;
     background-color: rgb(241, 222, 222);
     
-}
+} */
 
 .hero {
     background-image: url(https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg);
@@ -143,11 +213,8 @@ head {
 }
 
 .img {
-    padding-right: 5vw;
-    border-right: black groove;
-    border-width: thin;
-    animation-name: scale;
-    animation-duration: 3s;
+  float: left;
+  justify-content: flex-start;
 }
 
 h1 {
@@ -162,10 +229,6 @@ h2 {
 
 p {
     font-size: 11.872/2.986;
-}
-
-.link {
-    font-weight: bold;
 }
 
 form {
@@ -206,14 +269,14 @@ label {
   }
   
   .button {
-    padding-left: 90px; 
+    padding-right: 200px; 
   }
   
   button {
     margin-left: 0.5em;
   }
 
-  @media (max-width: 1015px) {
+@media (max-width: 1015px) {
     h1{
       font-size: 5.61rem;
     }
@@ -229,15 +292,6 @@ label {
     h4{
       font-size: 2.369rem;
     }
-   header {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-weight: bold;
-        padding-bottom: 0.5lh;
-        padding-top: 0.5lh;
-        scale: 0.85;
-   }
 
 @media (max-width: 880px) {
     
@@ -257,36 +311,8 @@ h4{
   font-size: 1.953rem;
 }
 .img {
-    transform: scale(0.65);
    }
-.hero {
-    background-image: url(https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg);
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: sticky;
-    height: auto;
-    min-width: 100%;
-    opacity: 90%;
-    flex: 1;
 
-}
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-weight: bold;
-    padding-bottom: 0.5lh;
-    padding-top: 0.5lh;
-    scale: 0.75;
-}
-ul {
-    display: flex;
-    list-style-type: none;
-    gap: 80px;
-    flex-direction: row;
-    padding-left: 80px;
-}
 }
 
 
@@ -303,49 +329,16 @@ ul {
         opacity: 90%;
         flex: 1;
     }
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-weight: bold;
-        padding-bottom: 0.5lh;
-        padding-top: 0.5lh;
-        scale: 0.65;
-        font-size: larger;
-    }
-    ul {
-        display: flex;
-        list-style-type: none;
-        gap: 50px;
-        flex-direction: row;
-        padding-left: 25px;
-    }
 }
 
 @media (max-width: 440px) {
-    .hero {
-        background-image: url(https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg);
-        background-position: top center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: sticky;
-        opacity: 90%;
-        flex: 1;
-    }
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-weight: bold;
-        transform: scale(0.9);
-        font-size: larger;
-    }
+
     ul {
         display: flex;
         list-style-type: none;
         gap: 28px;
         flex-direction: row;
-        padding-left: 5px;
+        padding-right: 4vw;
     }
     head {
         display: flex;
