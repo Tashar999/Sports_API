@@ -1,32 +1,31 @@
 import express from 'express';
-import http from 'node:http';
+import http from 'http';
 import cors from 'cors';
-import path from "path";
-import { hostname } from "node:os"
+import path from 'path';
+import { hostname } from 'os';
 
-const server = http.createServer();
-const app = express(server);
-const __dirname = process.cwd();
+const app = express();
+const server = http.createServer(app);
+const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/'));
-app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(process.cwd(), '/index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/index', (req, res) => {
-    res.sendFile(path.join(process.cwd(), '/index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/basketball', (req, res) => {
-    res.sendFile(path.join(process.cwd(), '/basketball.html'));
+    res.sendFile(path.join(__dirname, 'public', 'basketball.html'));
 });
 
 app.get('/football', (req, res) => {
-    res.sendFile(path.join(process.cwd(), '/football.html'));
+    res.sendFile(path.join(__dirname, 'public', 'football.html'));
 });
 
 const PORT = 3000;
@@ -40,16 +39,17 @@ server.on('listening', () => {
         `\thttp://${address.family === "IPv6" ? `[${address.address}]` : address.address
         }:${address.port}`
     );
-})
+});
 
-server.listen({ port: PORT, })
+server.listen(PORT);
 
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 
 function shutdown() {
     console.log("SIGTERM signal received: closing HTTP server");
-    server.close();
-    bareServer.close();
-    process.exit(0);
+    server.close(() => {
+        console.log("HTTP server closed");
+        process.exit(0);
+    });
 }
