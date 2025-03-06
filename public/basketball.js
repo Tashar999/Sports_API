@@ -21,9 +21,9 @@ const getPlayer = (player) => {
 
 console.log(getPlayer("James"));
 
-const teams = await api.nba.getTeams();
-const team = await api.nbagetTeam(1);
-const players = await api.nba.getPlayers({
+const teams = api.nba.getTeams();
+const team = api.nbagetTeam(1);
+const players = api.nba.getPlayers({
     search: `$player`,
 })
 
