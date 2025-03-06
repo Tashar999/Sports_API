@@ -213,7 +213,7 @@ head {
 
 @keyframes scale {
   50% {
-      transform: scale(0.5));
+      transform: scale(0.5);
   }
 }
 
