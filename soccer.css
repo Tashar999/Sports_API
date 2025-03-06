@@ -147,7 +147,6 @@ h4{
 .column {
   float: left;
   width: 33.3333%;
-  padding-left: 80px;
   background-color: #ccc;
   height: 350px;
 }
