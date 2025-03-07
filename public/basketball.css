@@ -12,7 +12,7 @@ body, html {
     padding: 0;
   }
   
-  
+
   .button1{
     appearance: none;
     border: none;
@@ -464,3 +464,4 @@ header p {
       width: 200%;
       padding-top: 200%;
     } 
+
