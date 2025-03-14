@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-      <header>
-        <a href="index.html"><img class="img" src="images/logo.png" alt="logo" width="80px"></a>
-        <p>Search For <strong>Players</strong></p>
-    <p>Research <strong>Stats</strong></p>
-    </header>
         <div class="navbar">
-            <a href="index.html">Home</a>
+          <a href="index.html"><img class="img" src="images/chickenlogo.png" alt="logo" width="80px"></a>
+            <a href="index.html">Home</a> 
             <div class="dropdown">
-              <button class="dropbtn">Sports</button>
+              <button class="dropbtn">Sports <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <a href="about.html">About</a>
               <div class="dropdown-content">
                 <div class="header">
                   <h3>Sports Statistics</h3>
@@ -48,7 +48,6 @@
                 </div>
               </div>
             </div>
-          </div>
     <div class="hero">
       <h2>API-S</h2>
       <p>Search. <br> Learn. <br> Use.</p>
@@ -63,23 +62,7 @@
             <aside class="green"></aside>
     </div>
     <div class="center">
-        <form action="/my-handling-form-page" method="post">
-            <p>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="user_name" />
-            </p>
-            <p>
-              <label for="mail">Email:</label>
-              <input type="email" id="mail" name="user_email" />
-            </p>
-            <p>
-              <label for="msg">Message:</label>
-              <textarea id="msg" name="user_message"></textarea>
-            </p>
-            <p class="button">
-                <button type="submit">Send your message</button>
-              </p>
-          </form>
+        
     </div>
     </div>
 </body>

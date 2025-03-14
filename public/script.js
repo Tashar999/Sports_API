@@ -40,3 +40,26 @@ async function getPlayerDetails() {
 function loopArray(data){
   length
 }
+
+const API_URL = 'https://apiv3.apifootball.com/?action=get_standings&league_id=153&APIkey=d0a198f9a82351d2795da1de28a3b4521eeba3dcb9581b3aa38b8d39c606bc84';
+
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(data => {
+        const tableBody = document.querySelector('#standingsTable tbody');
+
+        data.forEach(team => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${team.overall_league_position}</td>
+            <td>${team.team_name}</td>
+            <td>${team.overall_league_payed}</td>
+            <td>${team.overall_league_W}</td>
+            <td>${team.overall_league_D}</td>
+            <td>${team.overall_league_L}</td>
+            <td>${team.overall_league_PTS}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
