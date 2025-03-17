@@ -1,38 +1,15 @@
-import { BalldontlieAPI } from "@balldontlie/sdk";
-const api = new BalldontlieAPI({ apiKey: "5325159e-4a06-4e5e-ac9d-6f95aaa5a111"});
-
-async function getTeams() {
+async function getBasketballData() {
     try {
-        const teams = await api.teams.all();
-        console.log(teams)}
-        catch (error) {
-            console.error(error)
+        const response = await fetch('http://localhost:3000/api/basketball');
+        if (!response.ok) {
+            throw new Error('Failed to fetch basketball data');
         }
-}
-const getPlayer = async (player) => {
-    try{
-        const players = await api.players.all({ search: players });
-        return players;
+        const data = await response.json();
+        
+        console.log('Teams:', data.teams);
     } catch (error) {
-        console.error(error);
-        return null;
-    }
-};
-
-document.getElementById("BBPvalue");
-getPlayer("BBPvalue").then(playerData => {
-    console.log(playerData);
-});
-
-getTeams();
-
-async function fetchTeam() {
-    try {
-        const team = await api.teams.find(1);
-        console.log(team);
-    } catch (error) {
-        console.error(error);
+        console.error('Error:', error);
     }
 }
 
-fetchTeam();
+getBasketballData();
