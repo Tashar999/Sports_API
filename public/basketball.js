@@ -19,7 +19,8 @@ const getPlayer = async (player) => {
     }
 };
 
-getPlayer("James").then(playerData => {
+document.getElementById("BBPvalue");
+getPlayer("BBPvalue").then(playerData => {
     console.log(playerData);
 });
 
