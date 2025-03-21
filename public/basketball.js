@@ -13,3 +13,5 @@ async function getBasketballData() {
 }
 
 getBasketballData();
+
+/* to open the local host server in terminal type node index.js*/
