@@ -86,7 +86,19 @@
 
 
     <div class="center">
-      <h1>League Standings</h1>
+      <div class="content">
+        <h1>League Standings</h1>
+        <hr>
+      <div class="search-players">
+        <h3> Player Search</h1>
+        <input type="text" id="search-player">
+        <button class="button1" id="one"  onclick="getPlayerDetails()">Send</button>
+        <div class = "display-results" id="display-results">
+
+</div>
+      
+      </div>
+  </div>
       <table id="standingsTable">
         <thead>
           <tr>
@@ -106,13 +118,6 @@
     </div>
 
   </div>
-  <div class="search-players">
-    <input type="text" id="search-player">
-    <button class="button1" onclick="getPlayerDetails()">Send</button>
-</div>
-<div class = "display-results" id="display-results">
-
-</div>
 </div>
 <script src="script.js"></script>
 
