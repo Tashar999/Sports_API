@@ -31,23 +31,19 @@ app.get('/football', (req, res) => {
 
 app.get('/api/basketball', async (req, res) => {
     try {
-        const { player } = req.query;
-        
-        const teamsData = await getTeams();
-        const playerData = await getPlayer();
+        const first_name = req.query.first_name;
+        const last_name = req.query.last_name;
 
-        if (player) {
-            const filteredPlayer = playerData.filter(p => p.name.toLowerCase() === player.toLowerCase());
-            res.json({
-                teams: teamsData,
-                player: filteredPlayer
-            });
-        } else {
-            res.json({
-                teams: teamsData,
-                player: playerData
-            });
-        }
+        const teamsData = await getTeams();
+        const playerData = await api.nba.getPlayers({
+            first_name: first_name,
+            last_name: last_name,
+            per_page: 100
+        }); //237 = lebron
+
+        res.json({
+            player: playerData
+        });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -65,7 +61,7 @@ async function getTeams() {
 
 async function getPlayer(player) {
     try {
-        const response = await api.nba.getPlayers({ search: player });
+        const response = await api.nba.getPlayers({ search: player, per_page: 100 });
         return response.data;
     } catch (error) {
         console.error(error);
@@ -89,7 +85,11 @@ process.on("SIGTERM", shutdown);
 
 function shutdown() {
     console.log("SIGTERM signal received: closing HTTP server");
-    server.close(() => {
+    server.close((err) => {
+        if (err) {
+            console.log(err);
+            process.exit(1);
+        }
         console.log("HTTP server closed");
         process.exit(0);
     });
