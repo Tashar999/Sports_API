@@ -217,7 +217,7 @@ head {
 * {box-sizing:border-box}
 
 .carousel-container {
-  max-width: 100%;
+  max-width: 10000px;
   position: relative;
   margin: auto;
 }
