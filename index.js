@@ -59,9 +59,50 @@ async function getTeams() {
     }
 }
 
-async function getPlayer(player) {
+async function getPlayers(player) {
     try {
         const response = await api.nba.getPlayers({ search: player, per_page: 100 });
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        throw new Error('Failed to fetch player data');
+    }
+}
+
+// American Football //
+app.get('/api/football', async (req, res) => {
+    try {
+        const first_name = req.query.first_name;
+        const last_name = req.query.last_name;
+
+        const teamsData = await getTeams();
+        const playerData = await api.nfl.getPlayers({
+            first_name: first_name,
+            last_name: last_name,
+            per_page: 100
+        }); 
+
+        res.json({
+            player: playerData
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+async function getFBTeams() {
+    try {
+        const response = await api.nfl.getFBTeams();
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        throw new Error('Failed to fetch teams');
+    }
+}
+
+async function getFBPlayer(player) {
+    try {
+        const response = await api.nba.getFBPlayers({ search: player, per_page: 100 });
         return response.data;
     } catch (error) {
         console.error(error);
