@@ -12,7 +12,7 @@ body, html {
 }
 
 header {
-  background-color: #ce5050;
+  background-color: #f7efef;
   position: sticky;
   flex-direction: row;
   width: 100%;
@@ -56,11 +56,6 @@ header p {
 .navbar {
   overflow: hidden;
   background-color: #333;
-  padding-top: 20px;
-}
-
-.navbar a, button{
-  border-radius: 8px;
 }
 
 .navbar a {
@@ -113,6 +108,15 @@ float: left;
 width: 33.33%;
 background-color: #ccc;
 height: 350px;
+}
+
+.link {
+  display: flex;
+  list-style-type: none;
+  gap: 200px;
+  flex-direction: row;
+  padding-left: 100px;
+  font-weight: bold;
 }
 
 .column a {
@@ -210,15 +214,89 @@ head {
 
 }
 
+* {box-sizing:border-box}
+
+.carousel-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.Slides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 @keyframes scale {
   50% {
       transform: scale(0.5);
   }
-}
-
-.img {
-
 }
 
 .img:hover {
@@ -306,7 +384,7 @@ form {
   }
   
 
-  @media (max-width: 1015px) {
+  /* @media (max-width: 1015px) {
     h1{
       font-size: 5.61rem;
     }
@@ -378,4 +456,4 @@ h4{
         
     }
   }
-}
+} */
