@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +11,16 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      .carousel-img {
+          width: 100%;
+          height: 1050px; /*  height */
+          object-fit: cover;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
-      <!-- <header>
-        <a href="index.html"><img class="img" src="images/logo.png" alt="logo" width="80px"></a>
-        <p>Search For <strong>Players</strong></p>
-        <p>Research <strong>Stats</strong></p>
-      </header> -->
         <div class="navbar">
             <a href="index.html">Home</a> 
             <div class="dropdown">
@@ -36,25 +37,63 @@
                         <a href="soccer.html">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
-                      </div>
-                      <div class="column">
+                    </div>
+                    <div class="column">
                         <h4>Football</h4>
                         <a href="football.html">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
-                      </div>
-                      <div class="column">
+                    </div>
+                    <div class="column">
                         <h4>Basketball</h4>
                         <a href="basketball.html">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
-                      </div>
+                    </div>
                 </div>
               </div>
             </div>
-    </div>
-<div class="carousel-container" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 
+        </div>
 
+        <div class="carousel-container" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 
+            <div class="Slides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg" class="carousel-img">
+                <div class="text"><a style="color: black;" href="soccer.html">Research <strong>Soccer</strong></a></div>
+            </div>
+
+            <div class="Slides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://media.zenfs.com/en/caughtoffside_articles_473/d9db600c24d991f9f509ba42072fe51e" class="carousel-img">
+                <div class="text">Research <strong>Soccer</strong></div>
+            </div>
+
+            <div class="Slides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://resources.premierleague.pulselive.com/photo-resources/2024/05/29/9eee6a2c-442f-47fc-bdab-17e012e9728a/Chelsea-1-1-Liverpool.jpg?width=1400&height=800" class="carousel-img" alt="Placeholder">
+                <div class="text"><a href="football.html">Research Football</a></div>
+            </div>
+
+            <div class="Slides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/160204101907-nba-slam-dunk-5.jpg?q=w_4725,h_2658,x_0,y_0,c_fill" class="carousel-img">
+                <div class="text"><a href="basketball.html">Research <strong>Basketball</strong></a></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+<<<<<<< HEAD
   <div class="Slides fade">
     <div class="numbertext">1 / 4</div>
     <img src="https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg" style="width:100%">
@@ -64,19 +103,19 @@
   <div class="Slides fade">
     <div class="numbertext">2 / 4</div>
     <img src="https://media.zenfs.com/en/caughtoffside_articles_473/d9db600c24d991f9f509ba42072fe51e" style="width:100%">
-    <div class="text">Caption Two</div>
+    <div class="text">Research <strong>Soccer</strong></div>
   </div>
 
   <div class="Slides fade">
     <div class="numbertext">3 / 4</div>
-    <img src="https://media.video-cdn.espn.com/motion/2020/0121/dm_200121_nba_one_play_tatum_dunkcs_on_lebron/dm_200121_nba_one_play_tatum_dunkcs_on_lebron_default.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <img src="data:image/jpeg;base64,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" style="width:100%">
+    <div class="text"><a href="football.html">Research Football</a></div>
   </div>
 
   <div class="Slides fade">
     <div class="numbertext">4 / 4</div>
     <img src="https://media.cnn.com/api/v1/images/stellar/prod/160204101907-nba-slam-dunk-5.jpg?q=w_4725,h_2658,x_0,y_0,c_fill" style="width:100%">
-    <div class="text">Caption Four</div>
+    <div class="text"><a href="basketball.html">Research <strong>Basketball</strong></a></div>
   </div>
 
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -103,8 +142,8 @@
         
     </div>
     </div> -->
+=======
+    <script src="script.js"></script>
+>>>>>>> 23dd6565c1c96bf49afab426685e9e500f4d888e
 </body>
-<script src="script.js"></script>
 </html>
-<!-- 
-Make forms -->

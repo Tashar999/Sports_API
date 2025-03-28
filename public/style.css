@@ -217,7 +217,11 @@ head {
 * {box-sizing:border-box}
 
 .carousel-container {
-  max-width: 1000px;
+<<<<<<< HEAD
+  max-width: 100%;
+=======
+  max-width: 10000px;
+>>>>>>> 23dd6565c1c96bf49afab426685e9e500f4d888e
   position: relative;
   margin: auto;
 }
