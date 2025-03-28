@@ -220,6 +220,20 @@ header p {
       padding-bottom: 20px;
     }
   
+.BBresultContainer {
+  text-align: center;
+  flex: 2;
+  width: 100%;
+}
+
+.bplayer-data {
+  flex: 1;
+}
+
+.team-data {
+  flex: 1;
+}
+
   .container {
       min-height: 100%;
       width: 100%;

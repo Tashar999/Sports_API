@@ -27,7 +27,7 @@ async function getBasketballData(first_name, last_name) {
                 
                 displayPlayerData(player);
             } else {
-                console.log(`No player found with first name: ${first_name} and last name: ${last_name}`);
+                console.log(`No player found with first name. Make sure to capitalize player name: ${first_name} and last name: ${last_name}`);
                 document.getElementById('BBresultContainer').innerHTML = "<p>No player data found for the provided name.</p>";
             }
         } else {
@@ -46,23 +46,24 @@ function displayPlayerData(player) {
     
     
     resultContainer.innerHTML = `
+
+    <div class="BBresultContainer">
         <h2>Player Information</h2>
-        <p><strong>Name:</strong> ${player.first_name} ${player.last_name}</p>
+        <h5> ${player.first_name} ${player.last_name}</h5>
         <p><strong>Position:</strong> ${player.position}</p>
-        <p><strong>Height:</strong> ${player.height}</p>
-        <p><strong>Weight:</strong> ${player.weight} lbs</p>
+        <p><strong>Height:</strong> ${player.height}    <strong>Weight:</strong> ${player.weight} lbs</p>
         <p><strong>Jersey Number:</strong> ${player.jersey_number}</p>
         <p><strong>College:</strong> ${player.college}</p>
         <p><strong>Country:</strong> ${player.country}</p>
-        <p><strong>Draft Year:</strong> ${player.draft_year}</p>
-        <p><strong>Draft Round:</strong> ${player.draft_round}</p>
-        <p><strong>Draft Number:</strong> ${player.draft_number}</p>
+        <p><strong>Draft Year:</strong> ${player.draft_year}  <strong>Draft Round:</strong> ${player.draft_round}  <strong>Draft Number:</strong> ${player.draft_number}</p>
+
         
-        <h3>Team Information</h3>
+        <h2>Team Information</h2>
         <p><strong>Team:</strong> ${player.team.full_name} (${player.team.abbreviation})</p>
         <p><strong>Conference:</strong> ${player.team.conference}</p>
         <p><strong>Division:</strong> ${player.team.division}</p>
         <p><strong>City:</strong> ${player.team.city}</p>
+    </div>
     `;
 }
 
