@@ -1,17 +1,58 @@
 async function getBasketballData(first_name, last_name) {
-    try {
+    try {console.log(`Fetching data for player: ${first_name} ${last_name}`);
+        
         const response = await fetch(`http://localhost:3000/api/basketball?first_name=${first_name}&last_name=${last_name}`);
-            if (!response.ok) {
-            throw new Error('Failed to fetch basketball data');
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch Basketball data');
         }
+
         const data = await response.json();
 
-        console.log(data)
-        console.log(data.player.data[0])
+        console.log("API Response:", data);
+
+        if (data.data && data.data.length > 0) {
+            const player = data.data.find(p => p.first_name === first_name && p.last_name === last_name);
+
+            if (player) {
+                displayPlayerData(player);
+            } else {
+                document.getElementById('BBresultContainer').innerHTML = "<p>No player data found for the provided name.</p>";
+            }
+        } else {
+            document.getElementById('BBresultContainer').innerHTML = "<p>No player data found.</p>";
+        }
+
     } catch (error) {
         console.error('Error:', error);
+        document.getElementById('BBresultContainer').innerHTML = `<p>Error: ${error.message}</p>`;
     }
 }
+
+function displayPlayerData(player) {
+    const resultContainer = document.getElementById('BBresultContainer');
+    
+    resultContainer.innerHTML = `
+        <h2>Player Information</h2>
+        <p><strong>Name:</strong> ${player.first_name} ${player.last_name}</p>
+        <p><strong>Position:</strong> ${player.position}</p>
+        <p><strong>Height:</strong> ${player.height}</p>
+        <p><strong>Weight:</strong> ${player.weight} lbs</p>
+        <p><strong>Jersey Number:</strong> ${player.jersey_number}</p>
+        <p><strong>College:</strong> ${player.college}</p>
+        <p><strong>Country:</strong> ${player.country}</p>
+        <p><strong>Draft Year:</strong> ${player.draft_year}</p>
+        <p><strong>Draft Round:</strong> ${player.draft_round}</p>
+        <p><strong>Draft Number:</strong> ${player.draft_number}</p>
+        
+        <h3>Team Information</h3>
+        <p><strong>Team:</strong> ${player.team.full_name} (${player.team.abbreviation})</p>
+        <p><strong>Conference:</strong> ${player.team.conference}</p>
+        <p><strong>Division:</strong> ${player.team.division}</p>
+        <p><strong>City:</strong> ${player.team.city}</p>
+    `;
+}
+
 
 document.getElementById('BBPSearch').addEventListener('click', function() {
     const firstName = document.getElementById('BBPFirstName').value;
