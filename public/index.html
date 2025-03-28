@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +11,16 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      .carousel-img {
+          width: 100%;
+          height: 1050px; /*  height */
+          object-fit: cover;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
-      <!-- <header>
-        <a href="index.html"><img class="img" src="images/logo.png" alt="logo" width="80px"></a>
-        <p>Search For <strong>Players</strong></p>
-        <p>Research <strong>Stats</strong></p>
-      </header> -->
         <div class="navbar">
             <a href="index.html">Home</a> 
             <div class="dropdown">
@@ -36,25 +37,63 @@
                         <a href="soccer.html">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
-                      </div>
-                      <div class="column">
+                    </div>
+                    <div class="column">
                         <h4>Football</h4>
                         <a href="football.html">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
-                      </div>
-                      <div class="column">
+                    </div>
+                    <div class="column">
                         <h4>Basketball</h4>
                         <a href="basketball.html">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
-                      </div>
+                    </div>
                 </div>
               </div>
             </div>
-    </div>
-<div class="carousel-container" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 
+        </div>
 
+        <div class="carousel-container" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 
+            <div class="Slides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg" class="carousel-img">
+                <div class="text"><a style="color: black;" href="soccer.html">Research <strong>Soccer</strong></a></div>
+            </div>
+
+            <div class="Slides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://media.zenfs.com/en/caughtoffside_articles_473/d9db600c24d991f9f509ba42072fe51e" class="carousel-img">
+                <div class="text">Research <strong>Soccer</strong></div>
+            </div>
+
+            <div class="Slides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://resources.premierleague.pulselive.com/photo-resources/2024/05/29/9eee6a2c-442f-47fc-bdab-17e012e9728a/Chelsea-1-1-Liverpool.jpg?width=1400&height=800" class="carousel-img" alt="Placeholder">
+                <div class="text"><a href="football.html">Research Football</a></div>
+            </div>
+
+            <div class="Slides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/160204101907-nba-slam-dunk-5.jpg?q=w_4725,h_2658,x_0,y_0,c_fill" class="carousel-img">
+                <div class="text"><a href="basketball.html">Research <strong>Basketball</strong></a></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+<<<<<<< HEAD
   <div class="Slides fade">
     <div class="numbertext">1 / 4</div>
     <img src="https://the18.com/sites/default/files/feature-images/GettyImages-634168108.jpg" style="width:100%">
@@ -103,8 +142,8 @@
         
     </div>
     </div> -->
+=======
+    <script src="script.js"></script>
+>>>>>>> 23dd6565c1c96bf49afab426685e9e500f4d888e
 </body>
-<script src="script.js"></script>
 </html>
-<!-- 
-Make forms -->
