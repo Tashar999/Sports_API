@@ -68,13 +68,11 @@ let isRunning = false;
 let slideIndex = 1;
 showSlides(slideIndex);
     
-// Next/previous controls
 function plusSlides(n) {
   showSlidesmanual(slideIndex += n);
 }
 
 
-// Thumbnail image controls
 function currentSlide(n) {
 showSlidesmanual(slideIndex = n);
 }
@@ -94,7 +92,7 @@ if (slideIndex > slides.length) {slideIndex = 1}
 slides[slideIndex-1].style.display = "block";
 setTimeout(showSlidesmanual, 10000); 
 slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
+dots[slideIndex].className += " active";
 
     }
 
