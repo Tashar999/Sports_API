@@ -7,10 +7,6 @@ body, html {
   padding: 0;
 }
 
-.img {
-  top: 20px;
-}
-
 header {
   background-color: #f7efef;
   position: sticky;
@@ -217,13 +213,15 @@ head {
 * {box-sizing:border-box}
 
 .carousel-container {
-<<<<<<< HEAD
   max-width: 100%;
-=======
   max-width: 10000px;
->>>>>>> 23dd6565c1c96bf49afab426685e9e500f4d888e
   position: relative;
   margin: auto;
+}
+
+.carousel-container img {
+  height: 1200px;
+  flex: 1;
 }
 
 .Slides {
@@ -255,14 +253,69 @@ head {
 }
 
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+  top: 22%;
+  left: 20%;
+  backdrop-filter: blur(2px);
 }
+
+.text a {
+  color: rgb(255, 255, 255);
+  padding: 21px 37.5px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: x-large;
+  border: 4mm ridge black;
+  
+}
+
+.mtext {
+  position: absolute;
+  top: 15%;
+  left: 24%;
+  backdrop-filter: blur(4px);
+}
+
+.mtext a {
+   color: rgb(255, 255, 255);
+   padding: 21px 37.5px;
+   text-align: center;
+   border-radius: 25px;
+   font-size: x-large;
+   border: 4mm ridge black;
+ }
+ 
+ .ltext {
+  position: absolute;
+  top: 19%;
+  left: 24%;
+  backdrop-filter: blur(4px);
+}
+
+.ltext a {
+   color: rgb(255, 255, 255);
+   padding: 21px 37.5px;
+   text-align: center;
+   border-radius: 25px;
+   font-size: x-large;
+   border: 4mm ridge black;
+ }
+ 
+ .mjtext {
+  position: absolute;
+  top:35%;
+  left: 34%;
+  backdrop-filter: blur(4px);
+}
+
+.mjtext a {
+   color: rgb(255, 255, 255);
+   padding: 21px 37.5px;
+   text-align: center;
+   border-radius: 25px;
+   font-size: x-large;
+   border: 4mm ridge black;
+ }
 
 .numbertext {
   color: #f2f2f2;
@@ -301,10 +354,6 @@ head {
   50% {
       transform: scale(0.5);
   }
-}
-
-.img:hover {
-  background-color: black;
 }
 
 h1 {
