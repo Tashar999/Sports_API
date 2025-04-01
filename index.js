@@ -72,11 +72,11 @@ async function getPlayers(player) {
 // American Football //
 app.get('/api/football', async (req, res) => {
     try {
-        const first_name_FB = req.query.first_name_FB;
-        const last_name_FB = req.query.last_name_FB;
+        const first_name_FB = req.query.first_name;
+        const last_name_FB = req.query.last_name;
 
         //const teamsData = await getFBTeams();
-        const playerData = await api.nfl.getFBPlayer({
+        const playerData = await api.nfl.getPlayers({
             first_name: first_name_FB,
             last_name: last_name_FB,
             per_page: 100
@@ -92,7 +92,7 @@ app.get('/api/football', async (req, res) => {
 
 async function getFBTeams() {
     try {
-        const response = await api.nfl.getFBTeams();
+        const response = await api.nfl.getTeams();
         return response.data;
     } catch (error) {
         console.error(error);
@@ -102,7 +102,7 @@ async function getFBTeams() {
 
 async function getFBPlayer(player) {
     try {
-        const response = await api.nba.getFBPlayers({ search: player, per_page: 100 });
+        const response = await api.nba.getPlayers({ search: player, per_page: 100 });
         return response.data;
     } catch (error) {
         console.error(error);

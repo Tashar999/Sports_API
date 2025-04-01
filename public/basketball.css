@@ -12,6 +12,9 @@ body, html {
     padding: 0;
   }
 
+.submit {
+  width: 15%;
+}
 
 .button1{
   appearance: none;
@@ -244,9 +247,17 @@ header p {
   .center {
       flex: 3;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: stretch;
       justify-content: center;
+  }
+
+  .input {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      
   }
 
   .content {
