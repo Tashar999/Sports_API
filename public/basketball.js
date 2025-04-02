@@ -4,7 +4,7 @@ async function getBasketballData(first_name, last_name) {
         console.log(`Fetching data for player: ${first_name} ${last_name}`);
         
         
-        const response = await fetch(`http://localhost:3000/api/basketball?first_name=${first_name}&last_name=${last_name}`);
+        const response = await fetch(`/api/basketball?first_name=${first_name}&last_name=${last_name}`);
         
         if (!response.ok) {
             throw new Error('Failed to fetch Basketball data');
